@@ -76,17 +76,17 @@ Crie uma função com as seguintes características:
 5. Se nenhum argumento for passado, retorne o valor booleano `false`.
 6. E ainda, se nenhuma das condições acima forem atendidas, retorne `null`.
 */
-function args(x,y,z) {
+function newArgs(x,y,z) {
     if (x !== null && y == null && z == null ){
         return x;
     } else if ( x!== null && y !== null && z == null) {
         return x + y;
     } else if (x!== null && y !== null && z !== null){
         return (x + y) / z;
-    } else if (x == null && y == null && z == null){
+    } else if (x === undefined && y === undefined && z === undefined){
         return false;
     }else {
-        return  null;
+        return null;
     }
 }
 
