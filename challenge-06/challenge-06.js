@@ -38,7 +38,7 @@ Crie uma função chamada `showTeamPosition` com as seguintes características:
 // ?
 function showTeamPosition(valor) {
     
-    return valor < 5 ? 'O time que está em ' + valor + 'º lugar é o ' + teams[valor] + '.' : 'Não temos a informação do time que está nessa posição.';
+    return valor < 5 ? 'O time que está em ' + valor + 'º lugar é o ' + teams[valor - 1] + '.' : 'Não temos a informação do time que está nessa posição.';
 }
 /*
 Escolha 4 times do campeonato selecionado e mostre a posição dele, usando a
