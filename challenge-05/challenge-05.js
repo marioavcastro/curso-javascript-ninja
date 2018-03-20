@@ -4,16 +4,21 @@ Crie uma variável qualquer, que receba um array com alguns valores aleatórios
 */
 // ?
 
+var arr = ['mario', 31, 'janeiro', 'layane', 29];
+console.log(arr[2]);
+
 /*
 Crie uma função que receba um array como parâmetro, e retorne esse array.
 */
 // ?
-
+function retArray(newArr) {
+    return newArr;
+}
 /*
 Imprima o segundo índice do array retornado pela função criada acima.
 */
 // ?
-
+console.log(arr);
 /*
 Crie uma função que receba dois parâmetros: o primeiro, um array de valores; e o
 segundo, um número. A função deve retornar o valor de um índice do array que foi passado
@@ -21,18 +26,22 @@ no primeiro parâmetro. O índice usado para retornar o valor, deve ser o númer
 segundo parâmetro.
 */
 // ?
-
+function novoArray(arr,ind){
+    return arr[ind];
+}
 /*
 Declare uma variável que recebe um array com 5 valores, de tipos diferentes.
 */
 // ?
+
+var novoArray2 = [1,'mario',1.70,{o:1},[1,2,3]];
 
 /*
 Invoque a função criada acima, fazendo-a retornar todos os valores do último
 array criado.
 */
 // ?
-
+novoArray(novoArray2,2);
 /*
 Crie uma função chamada `book`, que recebe um parâmetro, que será o nome do
 livro. Dentro dessa função, declare uma variável que recebe um objeto com as
@@ -48,12 +57,38 @@ propriedades:
 os livros.
 */
 // ?
+function book(livro) {
+
+    var allBooks = {
+        'Ninja Javascript':{
+            quantidadePaginas:30,
+            autor:'mario',
+            editora:'mavc'
+        },
+
+        'Ninja Python':{
+            quantidadePaginas:30,
+            autor:'mario',
+            editora:'mavc'
+        },
+
+        'Ninja C':{
+            quantidadePaginas:30,
+            autor:'mario',
+            editora:'mavc'
+        }
+
+      };
+
+      return !livro ? allBooks : allBooks[livro];
+    }
+
 
 /*
 Usando a função criada acima, imprima o objeto com todos os livros.
 */
 // ?
-
+console.log(allBooks['']);
 /*
 Ainda com a função acima, imprima a quantidade de páginas de um livro qualquer,
 usando a frase:
