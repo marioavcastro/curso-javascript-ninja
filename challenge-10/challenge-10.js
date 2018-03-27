@@ -14,7 +14,7 @@
     var five = Number('5');
     console.log( five + ' é número?', typeof five === 'number' );
 
-    var concat = String(10 + 10);
+    var concat = String(10) + 10;
     console.log( '"' + concat + '" é uma string? E é igual a "1010"?', typeof concat === 'string' );
 
     /*
@@ -50,7 +50,9 @@
 
     function isOperatorValid(operator){
     //return (operador === '+' || operador === '-' || operador === '*' || operador === '/' || operador === '%');}
-    return operation[operator] !== undefined;
+    //return operation[operator] !== undefined;
+    return !!operation[operator];
+    }
 
     /*
     Agora vamos criar a calculadora.
@@ -66,9 +68,10 @@
     */
 
     function calculator(operator){
-        if(!isOperatorValid(operator)){
+  
+    if(!isOperatorValid(operator)){
             return false;
-        }
+    }
         return function(a,b){
             if(typeof a !== 'number' &&  typeof b !== 'number'){
                 return false;
