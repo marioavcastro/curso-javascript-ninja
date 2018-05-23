@@ -15,3 +15,72 @@ usar o nome que achar melhor, desde que ele seja semântico, ou seja, o nome
 dado ao elemento HTML deve definir o que o elemento é ou o que ele faz.
 */
 // ?
+
+(function (win,doc){
+    'use strict';
+         
+    var $crono = doc.querySelector('[data-js="crono"]');
+    var $btnStart = doc.querySelector('[data-js="iniciar"]');
+    var $btnStop  = doc.querySelector('[data-js="parar"]');
+    var $btnReset = doc.querySelector('[data-js="reset"]');
+    var temp;
+    $crono.value = 0;
+
+   /*Cronometro
+   function timer(){
+       $crono.value = +$crono.value + 1;
+       temp = setTimeout(timer,1000);
+   }
+
+    $btnStart.addEventListener('click', function(event){
+        event.preventDefault();
+        timer();
+
+        //2ª forma de se fazer
+       /* setTimeout(function timer(){
+            $crono.value++;
+            timer();
+        },1000);
+
+    }, false);
+    
+    //Parar cronometro
+    $btnStop.addEventListener('click', function stopTempo(event){
+        event.preventDefault();
+        clearTimeout(temp);
+    }, false);
+
+    //Resetar cronometro
+    $btnReset.addEventListener('click', function (event){
+        event.preventDefault();
+        
+        if(temp){
+            $crono.value = 0;
+            clearTimeout(temp);
+           }
+           
+    }, false);
+    */
+
+    //Segunda forma de cronometro
+    
+    $btnStart.addEventListener('click', cronometro, false);
+    $btnStop.addEventListener('click', stopTime, false);
+    $btnReset.addEventListener('click', timeReset, false);
+
+    function cronometro(){
+        $crono.value = +$crono.value + 1;
+        temp = setTimeout(cronometro,1000);
+    }
+
+    function stopTime(){
+        clearTimeout(temp);
+    }
+
+    function timeReset(){
+        $crono.value = 0;
+        stopTime();
+    }
+
+    
+})(window, document);
