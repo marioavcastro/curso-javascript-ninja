@@ -1,33 +1,48 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="utf-8">
-  <title>Challenge 24 - Calculator</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora JS</title>
+    <link rel="stylesheet" href="css/style.css">
+    
 </head>
 <body>
-  <input type="text" value="0" readonly data-js="visor">
-  <div class="buttons-numbers">
-    <button data-js="button-number" value="0">0</button>
-    <button data-js="button-number" value="1">1</button>
-    <button data-js="button-number" value="2">2</button>
-    <button data-js="button-number" value="3">3</button>
-    <button data-js="button-number" value="4">4</button>
-    <button data-js="button-number" value="5">5</button>
-    <button data-js="button-number" value="6">6</button>
-    <button data-js="button-number" value="7">7</button>
-    <button data-js="button-number" value="8">8</button>
-    <button data-js="button-number" value="9">9</button>
-  </div>
-
-  <div class="operations">
-    <button data-js="button-operation" value="+">+</button>
-    <button data-js="button-operation" value="-">-</button>
-    <button data-js="button-operation" value="x">x</button>
-    <button data-js="button-operation" value="÷">÷</button>
-    <button data-js="button-equal" value="=">=</button>
-    <button data-js="button-ce" value="ce">CE</button>
-  </div>
-
-  <script src="challenge-24.js"></script>
+    <div class="box-calc">
+        <div class="visor">
+            <input type="text" data-js="display" readonly>
+        </div>
+        <div class="row-keys">
+            <button class="keys" value=7 data-js="keys">7</button>
+            <button class="keys" value=8 data-js="keys">8</button>
+            <button class="keys" value=9 data-js="keys">9</button>
+            <button class="keys" value='\/' data-js="keysOp">/</button>
+        </div>
+        <div class="row-keys">
+            <button class="keys" value=4  data-js="keys">4</button>
+            <button class="keys" value=5  data-js="keys">5</button>
+            <button class="keys" value=6  data-js="keys">6</button>
+            <button class="keys" value='x' data-js="keysOp">x</button>
+        </div>
+        <div class="row-keys">
+            <button class="keys" value=1 data-js="keys">1</button>
+            <button class="keys" value=2 data-js="keys">2</button>
+            <button class="keys" value=3 data-js="keys">3</button>
+            <button class="keys" value='\-' data-js="keysOp">-</button>
+        </div>
+        <div class="row-keys">
+            <button class="keys" value=0 data-js="keys">0</button>
+            <button class="keys" value='.' data-js="keys">.</button>
+            <button class="keys" value='=' data-js="keysEqual">=</button>
+            <button class="keys" value='+' data-js="keysOp">+</button>
+        </div>
+        <div class="row-keys">
+            <button class="keys"   data-js="keysCE">CE</button>
+            <button class="keys"   data-js="keys">MR</button>
+            <button class="keys"  data-js="keys" >M</button>
+            <button class="keys"   data-js="keys">+</button>
+        </div>
+    </div><!-- Box Calculadora-->
+    <script src="js/calculadora.js"></script>
 </body>
 </html>
